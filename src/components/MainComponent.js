@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
@@ -22,7 +22,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 // What I want to read
 const mapStateToProps = (state) => {
   return {
-    campsites: state.resources,
+    resources: state.resources,
     comments: state.comments,
     partners: state.partners,
     promotions: state.promotions,
@@ -32,7 +32,7 @@ const mapStateToProps = (state) => {
 // What I want to update through actions (dispatch)
 const mapDispatchToProps = {
   postComment,
-  fetchCampsites,
+  fetchResources,
   resetFeedbackForm: () => actions.reset("feedbackForm"),
   fetchComments,
   fetchPromotions,
@@ -49,6 +49,8 @@ class Main extends Component {
   }
 
   render() {
+    console.log(this.props);
+    console.log(this.props.resources);
     const HomePage = () => {
       return (
         <Home
@@ -58,7 +60,7 @@ class Main extends Component {
             )[0]
           }
           resourcesLoading={this.props.resources.isLoading}
-          campsitesErrMess={this.props.resources.errMess}
+          resourcesErrMess={this.props.resources.errMess}
           promotion={
             this.props.promotions.promotions.filter(
               (promotion) => promotion.featured

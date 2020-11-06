@@ -1,22 +1,22 @@
 import * as ActionTypes from "./ActionTypes";
 
-export const campsites = (
-  state = { isLoading: true, errMess: null, campsites: [] },
+export const resources = (
+  state = { isLoading: true, errMess: null, resources: [] },
   action
 ) => {
   switch (action.type) {
-    case ActionTypes.ADD_CAMPSITES:
+    case ActionTypes.ADD_RESOURCES:
       return {
         ...state,
         isLoading: false,
         errMess: null,
-        campsites: action.payload,
+        resources: action.payload,
       };
 
-    case ActionTypes.CAMPSITES_LOADING:
-      return { ...state, isLoading: true, errMess: null, campsites: [] };
+    case ActionTypes.RESOURCES_LOADING:
+      return { ...state, isLoading: true, errMess: null, resources: [] };
 
-    case ActionTypes.CAMPSITES_FAILED:
+    case ActionTypes.RESOURCES_FAILED:
       return { ...state, isLoading: false, errMess: action.payload };
 
     default:

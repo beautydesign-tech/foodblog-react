@@ -1,9 +1,9 @@
-export const CAMPSITES = [
+export const RESOURCES = [
   {
     id: 0,
     name: "Farm City",
     author: "Novella Carpenter",
-    image: "/img/farmcity.jpg",
+    image: "img/farmcity.jpg",
     featured: true,
     type: "book",
     description:
@@ -13,7 +13,7 @@ export const CAMPSITES = [
     id: 1,
     name: "The Essential Urban Farmer",
     author: ["Novella Carpenter", "Willow Rosenthal"],
-    image: "/img/essentialurbanfarmer.jpg",
+    image: "img/essentialurbanfarmer.jpg",
     featured: false,
     type: "book",
     description: "",
@@ -22,7 +22,7 @@ export const CAMPSITES = [
     id: 2,
     name: "Gaia's Garden",
     author: "Toby Hemenway",
-    image: "/img/gaiagarden.jpg",
+    image: "img/gaiagarden.jpg",
     featured: false,
     type: "book",
     description: "",
@@ -31,7 +31,7 @@ export const CAMPSITES = [
     id: 3,
     name: "Chef's Knife",
     author: "Kan",
-    image: "/img/kenjilopezaltknife.jpg",
+    image: "img/kenjilopezaltknife.jpg",
     featured: false,
     type: "tool",
     description: "",
@@ -40,7 +40,7 @@ export const CAMPSITES = [
     id: 4,
     name: "Mocajete",
     author: "",
-    image: "/img/mocajete.jpg",
+    image: "img/mocajete.jpg",
     featured: false,
     type: "tool",
     description: "",

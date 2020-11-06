@@ -30,6 +30,8 @@ function RenderCard({ item, isLoading, errMess }) {
 }
 
 function Home(props) {
+  console.log(props);
+  console.log(props.resource);
   return (
     <div className="container">
       <div className="row">
